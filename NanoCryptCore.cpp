@@ -1,7 +1,9 @@
 /* 
- * NanoCrypt v0.1
+ * NanoCrypt v0.2
  * 
  * NanoCryptCore.cpp
+ * 
+ * Core cryptography and file manipulation
  * 
  * Repo: https://github.com/TonyWu386/NanoCrypt
  * 
@@ -75,7 +77,7 @@ int main( int argc, char *argv[])
 
   if ( argc != 3)
   {
-    cout << "usage: arc4pp file key" << endl;
+    cout << "usage: NanoCryptCore file key" << endl;
     return 1;
   }
 
@@ -97,7 +99,8 @@ int main( int argc, char *argv[])
 
   //Convert the key from a hexstring to a char array
   char *pos = argv[2];
-  for(short i = 0; i < 32; i++) {
+  for(short i = 0; i < 32; i++)
+  {
     sscanf(pos, "%2hhx", &key[i]);
     pos += 2;
   }
