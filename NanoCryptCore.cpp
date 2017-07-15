@@ -77,13 +77,13 @@ int main( int argc, char *argv[])
 
   if ( argc != 3)
   {
-    cout << "usage: NanoCryptCore file key" << endl;
+    cerr << "usage: NanoCryptCore file key" << endl;
     return 1;
   }
 
   if (strlen(argv[2]) != 64)
   {
-    cout << "key is wrong size: " << strlen(argv[2]) << endl;
+    cerr << "key is wrong size: " << strlen(argv[2]) << endl;
     return 1;
   }
 
@@ -91,7 +91,7 @@ int main( int argc, char *argv[])
 
   if (toEncrypt.fail())
   {
-    cout << "cannot open file: " << argv[1] << endl;
+    cerr << "cannot open file: " << argv[1] << endl;
     return 1;
   }
 

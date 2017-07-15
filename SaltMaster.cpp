@@ -79,7 +79,10 @@ int main( int argc, char *argv[])
     }
 
     //Remove the salt from the end of the file
-    truncate(argv[2], fileSize - 16);
+    if (truncate(argv[2], fileSize - 16) != 0)
+    {
+      return 1;
+    }
 
     cout << ss.str();
   }
