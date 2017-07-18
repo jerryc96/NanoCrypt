@@ -20,3 +20,6 @@ Use NanoCrypt.py (Python3) to use this tool in an interactive manner. NanoCrypt.
 To use the sub-tools manually, note:
 
 Key must be a hexadecimal string of length 64 (32-bytes/256-bit). Ensure it comes from a properly salted key derivation function. Salt must be a hexadecimal string of length 32 (16-bytes/128-bit). SaltMaster can be used to add/remove salts from newly encrypted/decrypted files. Flags are "add" or "remove".
+
+
+Not My Work. Using this to get a better understanding of C++ classes.
